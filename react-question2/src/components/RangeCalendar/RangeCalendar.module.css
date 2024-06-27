@@ -1,0 +1,77 @@
+.calendar {
+  width: 21.875rem;
+  /* height: 15rem; */
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.calendar-header {
+  height: 2.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-month_select_button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.calendar-month_select_button:hover {
+  background-color: #e6e6e6;
+}
+
+.calendar-month_select_button-last {
+  transform: rotateY('90deg');
+}
+
+.calendar-month_select_button-next {
+  transform: rotateY('180deg');
+}
+
+.calendar-month_selection {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 100%;
+}
+
+.calendar-body_date_item {
+  width: 3.125rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.calendar-body_date_item.today {
+  background-color: #ffff76;
+}
+
+.calendar-body_date_item:hover {
+  background-color: #e6e6e6;
+}
+
+.calendar-body_date_item.active {
+  background-color: #006edc;
+  color: white;
+}
+
+.calendar-body_date_item.non-current-month {
+  color: #757575;
+  cursor: not-allowed;
+}
+.calendar-body_date_item.non-current-month:hover {
+  background-color: white;
+}
