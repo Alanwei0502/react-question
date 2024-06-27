@@ -1,6 +1,6 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import { appDayjs } from '../../utils/dayjs.utils';
-import classes from './RangeCalendar.module.css'
+import classes from './RangeCalendar.module.css';
 
 interface IMonthSelectionProps {
   value: appDayjs.Dayjs;
@@ -12,8 +12,14 @@ const MonthSelection: FC<IMonthSelectionProps> = (props) => {
   const { value, onToggleMonthOptions, sx = {} } = props;
 
   return (
-    <div className={classes['calendar-month_selection']} onClick={onToggleMonthOptions} style={sx}>{appDayjs(value).format('YYYY年M月')}</div>
-  )
-}
+    <div
+      className={classes['calendar-month_selection']}
+      onClick={onToggleMonthOptions}
+      style={sx}
+    >
+      {appDayjs(value).format('YYYY年M月')}
+    </div>
+  );
+};
 
-export default MonthSelection
+export default MonthSelection;
